@@ -1,0 +1,94 @@
+html,
+body {
+    margin:0;
+    padding:0;
+    background: #fff;
+}
+
+
+#jscopter-container {
+    position: relative;
+    margin: 2em;
+    width: 500px;
+    height: 300px;
+}
+
+#currentscorecontainer {
+    position:absolute;
+    top: -10px;
+    left: 0;
+    color:#fff;
+    padding-left : 10px;
+}
+
+#topscorecontainer {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    color:#fff;
+}
+
+#deathtext {
+    position:absolute;
+    left : 0px;
+    bottom: 0px;
+    margin: 0;
+    color:#fff;
+    font-weight:bold;
+    font-family:Georgia, Arial, sans-serif;
+    font-size : 1.8em;
+}
+
+
+/* form */
+    form {
+        margin: 2em;
+    }
+
+    fieldset {
+        float : left;
+        width : 125px;
+        margin : 0 10px 10px 0;
+        padding : 10px;
+        background : #eee;
+    }
+
+    fieldset input.text {
+        width : 10em;
+        padding: 0.5em 1em;
+        margin-bottom : 1em;
+    }
+
+    fieldset.set-actions {
+        float : none;
+        clear : both;
+        background : none;
+        padding : 2em;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    input.button {
+        float : left;
+        display: inline-block;
+        margin-right : 20px;
+        padding: 1em 5em;
+        background: #ccc;
+        border: none;
+        cursor: pointer;
+    }
+
+    input.button:hover {
+        background: #aaa;
+    }
+
+
+/* URL */
+    #customisable {
+        margin: 2em;
+    }
+
+    textarea {
+        width : 100%;
+        padding: 1em;
+    }

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>JS Canvas Copter</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+        <div id="jscopter-container"></div>
+
+        <p id="customisable-link"><a href="./customisable/">See customisable version</a></p>
+
+        <script src="cookies.js"></script>
+        <script src="script.js"></script>
+        <script>
+            var options = {
+                copter : {
+                    height : 15,
+                    width : 30
+                },
+                canvas : {
+                    height : 300,
+                    width : 500,
+                    refreshRate : 20
+                }
+            };
+
+            jsCopter.init("jscopter", "jscopter-container", options);
+        </script>
+        <script src="http://thegingerbloke.github.io/lab-badge/lab-badge.min.js"></script>
+    </body>
+</html>

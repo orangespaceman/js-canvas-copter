@@ -1,0 +1,355 @@
+<html>
+    <head>
+        <title>JS Canvas Copter - Customisable</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+        <div id="jscopter-container"></div>
+
+        <p>Change the options in the form below to customise the game...</p>
+
+        <form method="post" action="#">
+
+             <fieldset class="set-actions">
+                 <input type="submit" class="button go" name="go" id="go2" value="go" />
+                 <input type="submit" class="button reset" name="reset" id="reset2" value="reset to defaults" />
+             </fieldset>
+
+             <fieldset id="set-obstacles">
+                 <legend>Obstacles</legend>
+                 <h3>Obstacles</h3>
+                 <div class="inputcontainer clearfix">
+                     <label for="obstacles-separation">separation</label>
+                     <input type="text" class="text" name="obstacles-separation" id="obstacles-separation" />
+                 </div>
+                 <div class="inputcontainer clearfix">
+                     <label for="obstacles-width">width</label>
+                     <input type="text" class="text" name="obstacles-width" id="obstacles-width" />
+                 </div>
+                 <div class="inputcontainer clearfix">
+                     <label for="obstacles-height">height</label>
+                     <input type="text" class="text" name="obstacles-height" id="obstacles-height" />
+                 </div>
+             </fieldset>
+
+             <fieldset id="set-colours">
+                 <legend>Colours</legend>
+                 <h3>Colours</h3>
+                 <div class="inputcontainer clearfix">
+                     <label for="colours-bg">background</label>
+                     <input type="text" class="text" name="colours-bg" id="colours-bg" />
+                 </div>
+                 <div class="inputcontainer clearfix">
+                     <label for="colours-fill">fill</label>
+                     <input type="text" class="text" name="colours-fill" id="colours-fill" />
+                 </div>
+                 <div class="inputcontainer clearfix">
+                     <label for="colours-light">light</label>
+                     <input type="text" class="text" name="colours-light" id="colours-light" />
+                 </div>
+             </fieldset>
+
+             <fieldset id="set-physics">
+                  <legend>Physics</legend>
+                  <h3>Physics</h3>
+                  <div class="inputcontainer clearfix">
+                      <label for="physics-terminalVelocity">terminal velocity</label>
+                      <input type="text" class="text" name="physics-terminalVelocity" id="physics-terminalVelocity" />
+                  </div>
+                  <div class="inputcontainer clearfix">
+                      <label for="physics-gravity">gravity</label>
+                      <input type="text" class="text" name="physics-gravity" id="physics-gravity" />
+                  </div>
+                  <div class="inputcontainer clearfix">
+                      <label for="physics-friction">friction</label>
+                      <input type="text" class="text" name="physics-friction" id="physics-friction" />
+                  </div>
+              </fieldset>
+
+            <fieldset id="set-walls">
+                <legend>Walls</legend>
+                <h3>Walls</h3>
+                <div class="inputcontainer clearfix">
+                    <label for="walls-separation">separation</label>
+                    <input type="text" class="text" name="walls-separation" id="walls-separation" disabled="disabled" />
+                </div>
+                <div class="inputcontainer clearfix">
+                    <label for="walls-width">width</label>
+                    <input type="text" class="text" name="walls-width" id="walls-width" disabled="disabled" />
+                </div>
+                <div class="inputcontainer clearfix">
+                    <label for="walls-step">step</label>
+                    <input type="text" class="text" name="walls-step" id="walls-step" />
+                </div>
+                <div class="inputcontainer clearfix">
+                    <label for="walls-startHeight">start Height</label>
+                    <input type="text" class="text" name="walls-startHeight" id="walls-startHeight" />
+                </div>
+                <div class="inputcontainer clearfix">
+                    <label for="walls-maxHeight">maxHeight</label>
+                    <input type="text" class="text" name="walls-maxHeight" id="walls-maxHeight" />
+                </div>
+                <div class="inputcontainer clearfix">
+                    <label for="walls-heightIncreaseInterval">height Increase Interval</label>
+                    <input type="text" class="text" name="walls-heightIncreaseInterval" id="walls-heightIncreaseInterval" />
+                </div>
+                <div class="inputcontainer clearfix">
+                    <label for="walls-heightIncreaseStep">height Increase Step</label>
+                    <input type="text" class="text" name="walls-heightIncreaseStep" id="walls-heightIncreaseStep" />
+                </div>
+            </fieldset>
+
+            <fieldset id="set-copter">
+                <legend>Copter</legend>
+                <h3>Copter</h3>
+                <div class="inputcontainer clearfix">
+                    <label for="copter-width">Width</label>
+                    <input type="text" class="text" name="copter-width" id="copter-width" />
+                </div>
+                <div class="inputcontainer clearfix">
+                    <label for="copter-height">height</label>
+                    <input type="text" class="text" name="copter-height" id="copter-height" />
+                </div>
+                <div class="inputcontainer clearfix">
+                    <label for="copter-topSpeed">top Speed</label>
+                    <input type="text" class="text" name="copter-topSpeed" id="copter-topSpeed" />
+                </div>
+                <div class="inputcontainer clearfix">
+                    <label for="copter-acceleration">acceleration</label>
+                    <input type="text" class="text" name="copter-acceleration" id="copter-acceleration" />
+                </div>
+                <div class="inputcontainer clearfix">
+                    <label for="copter-img">Image URL</label>
+                    <input type="text" class="text" name="copter-img" id="copter-img" />
+                </div>
+            </fieldset>
+
+            <fieldset id="set-canvas">
+                <legend>canvas</legend>
+                <h3>canvas</h3>
+                <div class="inputcontainer clearfix">
+                    <label for="canvas-width">Width</label>
+                    <input type="text" class="text" name="canvas-width" id="canvas-width" />
+                </div>
+                <div class="inputcontainer clearfix">
+                    <label for="canvas-height">height</label>
+                    <input type="text" class="text" name="canvas-height" id="canvas-height" />
+                </div>
+                <div class="inputcontainer clearfix">
+                    <label for="canvas-refreshRate">refresh rate</label>
+                    <input type="text" class="text" name="canvas-refreshRate" id="canvas-refreshRate" />
+                </div>
+            </fieldset>
+
+            <fieldset class="set-actions">
+                <input type="submit" class="button go" name="go" id="go" value="go" />
+                <input type="submit" class="button reset" name="reset" id="reset" value="reset to defaults" />
+            </fieldset>
+        </form>
+
+        <div id="customisable">
+            <h3>Customised game URL:</h3>
+            <textarea readonly='readonly' id="customised-url" name="customised-url" rows="5" cols="30"></textarea>
+            <p>The URL above will allow you to play the game again with these settings, or send it to others...</p>
+        </div>
+
+        <script src="jquery.min.js"></script>
+        <script src="../cookies.js"></script>
+        <script src="url.js"></script>
+        <script src="../script.js"></script>
+        <script>
+            $(document).ready(function(){
+
+                // set the default values
+                var options = defaults = {
+                    canvas : {
+                        width : 500,
+                        height : 300,
+                        refreshRate : 20
+                    },
+                    copter : {
+                        width : 30,
+                        height : 15,
+                        topSpeed : 5,                   // max speed
+                        acceleration : 0.15,            // how much to increase the speed by each time the game refreshes and the button is held down
+                        img : null                      // optional copter image path, relative to the html page
+                    },
+                    physics : {
+                        terminalVelocity : 4,           // max speed
+                        gravity : 0.5,
+                        friction : 0.8
+                    },
+                    walls : {
+                        separation : 19,                //fudge
+                        width : 20,
+                        step : 5,                       // potential height difference for each new wall
+                        startHeight : 60,
+                        maxHeight : 120,
+                        heightIncreaseInterval : 5,     // how often to increase the height of each wall (from start to max)
+                        heightIncreaseStep : 10         // how much to increase the height of each wall by
+                    },
+                    obstacles : {
+                        separation : 250,               // frequency of obstacles
+                        width : 20,
+                        height : 50
+                    },
+                    colours : {
+                        bg : "black",
+                        fill : "orange",
+                        light : "white"
+                    }
+                }
+
+                // set game defaults from the url
+                options = setURLDefaults(defaults);
+
+                // set initial defaults in the form
+                setFormDefaults(options);
+
+                // start the game
+                jsCopter.init("jscopter", "jscopter-container", options);
+
+
+                // detect a form reset
+                $('input.reset').click(function(e){
+                    // stop link refreshing page
+                    e.preventDefault();
+
+                    // lose focus on current link
+                    this.blur();
+
+                    // reset the form values to defaults
+                    options = setFormDefaults(defaults);
+
+                    // remove existing game
+                    resetCopter();
+
+                    // restart the game
+                    jsCopter.init("jscopter", "jscopter-container", options);
+                });
+
+
+                // detect a form reset
+                $('input.go').click(function(e){
+
+                    // stop link refreshing page
+                    e.preventDefault();
+
+                    // lose focus on current link
+                    this.blur();
+
+                    // collect new options values
+                    options = collectValues();
+
+                    // remove existing game
+                    resetCopter();
+
+
+                    // restart the game
+                    jsCopter.init("jscopter", "jscopter-container", options);
+                });
+            });
+
+
+
+            // reset all input values from defaults
+            function setFormDefaults(defaults) {
+
+                // loop through all input fields
+                $('input.text').each(function(x) {
+
+                    var optionValue = $(this).attr('id').split('-');
+                    $(this).attr('value',defaults[optionValue[0]][optionValue[1]]);
+                });
+                return defaults;
+            }
+
+
+
+            // collect all input values
+            function collectValues() {
+
+                // start an object to return values
+                var options = {};
+
+                // start a customised url for the text area
+                var siteurl = window.location.href.split('?')[0] + "?";
+
+                // loop through all input fields
+                $('input.text').each(function(x) {
+                    if ($(this).attr('value') !="") {
+                        var optionValue = $(this).attr('id').split('-');
+                        if (!options[optionValue[0]]) {
+                            options[optionValue[0]] = {};
+                        }
+
+                        if (!((optionValue[0] == "copter" && optionValue[1] == "img") || optionValue[0] == "colours")) {
+                            var value = parseFloat($(this).attr('value'));
+                        } else {
+                            var value = $(this).attr('value');
+                        }
+
+                        // add to url
+                        siteurl += $(this).attr('id') + "=" + value + "&";
+
+                        // add to array
+                        options[optionValue[0]][optionValue[1]] = value;
+                    }
+                });
+
+                // remove final ampersand
+                siteurl = siteurl.slice(0, -1);
+
+                // customise the text area
+                $('#customised-url').html(siteurl);
+
+                return options;
+            }
+
+
+            // set game defaults from the url string
+            function setURLDefaults(defaults){
+
+                // get any variables passed through the URL
+                url.init();
+                var customisations = url.params;
+
+                // loop through all input fields
+                 $(customisations).each(function(x) {
+
+                     var optionValue = $(this).attr('param').split('-');
+                     if (!!defaults[optionValue[0]] && !!optionValue[1] && !!defaults[optionValue[0]][optionValue[1]]) {
+
+                         if (!((optionValue[0] == "copter" && optionValue[1] == "img") || optionValue[0] == "colours")) {
+                             var value = parseFloat($(this).attr('encoded'));
+                         } else {
+                             var value = $(this).attr('encoded');
+                         }
+
+                         defaults[optionValue[0]][optionValue[1]] = value;
+                     }
+                 });
+
+                // set the current URL
+                $('#customised-url').html(window.location.href);
+
+                return defaults;
+            }
+
+
+            // reset copter
+            function resetCopter() {
+                $("#jscopter").remove();
+                $('#currentscorecontainer').remove();
+                $('#topscorecontainer').remove();
+                $("#deathtext").remove();
+                jsCopter.canvas = null;
+                jsCopter.drawContext = null;
+                jsCopter.deathText = null;
+            }
+        </script>
+        <script src="http://thegingerbloke.github.io/lab-badge/lab-badge.min.js"></script>
+    </body>
+</html>
