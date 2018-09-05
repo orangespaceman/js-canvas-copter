@@ -1,6 +1,5 @@
 /*
  * Cookie Functions
- * authored/compiled by pete goodman
  */
 
 var cookie = {

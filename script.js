@@ -4,7 +4,6 @@
  * Based on the original flash copter game:
  * http://www.seethru.co.uk/zine/south_coast/helicopter_game.htm
  *
- * @author petegoodman.com
  */
 
 var jsCopter = {
